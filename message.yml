@@ -2,6 +2,6 @@
 - name: debug message
   hosts: localhost 
   tasks:
-    - name: Print Hello World
+    - name: echo Hello Ansible
       ansible.builtin.debug:
-        msg: "{{ DBGMSG }}" 
+        msg: "{{ DBGMSG | default('Hello Ansible') }}" 
